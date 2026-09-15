@@ -1,0 +1,249 @@
+:root {
+    /* COLORS */
+
+        /* Primary */
+        --Blue100: hsl(225, 100%, 94%);
+        --Blue700: hsl(245, 75%, 52%);
+
+        /* Neutral */
+        --White: hsl(0, 0%, 99%);
+        --Blue50: hsl(225, 100%, 98%);
+        --Gray600: hsl(224, 23%, 55%);
+        --Blue950: hsl(223, 47%, 23%);
+
+    /* TYPOGRAPHY */    
+
+        /* Font family */
+        --ff-RedHatDisplay: "Red Hat Display", sans-serif;
+
+        /* Font weights */
+        --fw-regular: 500;
+        --fw-semi-bold: 700;
+        --fw-bold: 900;
+}
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    font-family: var(--ff-RedHatDisplay);
+    
+    color: var(--Gray600);
+    background-color: var(--Blue100);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
+}
+
+/* LAYOUT */
+
+main {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+
+.order-summary {
+    width: calc(100% - 3rem);
+    max-width: 21.438rem;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+    
+    background-color: var(--White);
+
+    box-shadow: 0 10px 20px rgba(56, 55, 55, 0.2);
+}
+
+/* ORDER SUMMARY IMAGE */
+
+.order-summary__illustration {
+    width: 100%;
+    display: block;
+}
+
+/* ORDER SUMMARY CONTENT */
+
+.order-summary__content {
+    margin: 1rem 0;
+    padding: 0 1.6rem;
+
+    text-align: center;
+}
+
+.order-summary__title { 
+    margin: 0;
+
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    
+    color: var(--Blue950);
+}
+
+.order-summary__description {
+    font-size: 1.1rem;
+    font-weight: var(--fw-regular);
+    line-height: 1.5;
+}
+
+/* PLAN SECTION  */
+
+.order-summary__plan {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+
+    margin: 0 1.2rem;
+    padding: 1rem;
+
+    border-radius: 0.7rem;
+
+    background-color: var(--Blue50);
+}
+
+.order-summary__plan-icon {
+    height: 3.3rem;
+}
+
+.order-summary__plan-info {
+    min-width: 0;
+}
+
+.order-summary__plan-name {
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+
+    color: var(--Blue950);
+}
+
+.order-summary__plan-price {
+    margin: 0;
+
+    font-size: 1rem;
+}
+
+.order-summary__plan-change {
+    font-size: 0.875rem;
+    font-weight: var(--fw-bold);
+    
+    color: var(--Blue700);
+
+    transition: color 0.2s ease;
+}
+
+/* BUTTONS */
+
+.order-summary__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin: 1.6rem 1.2rem;
+}
+
+.order-summary__payment-button,
+.order-summary__cancel-button {
+    padding: 1rem;
+
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: var(--fw-semi-bold);
+
+    border: none;
+    border-radius: 0.7rem;
+
+    cursor: pointer;
+
+    transition: 
+        background-color 0.2s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.order-summary__payment-button {
+    color: var(--White);
+    background-color: var(--Blue700);
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.order-summary__cancel-button {
+    color: var(--Gray600) ;
+    background-color: var(--White);
+}
+
+/* FOOTER */
+
+.attribution { 
+    font-size: 0.8rem; 
+    text-align: center; 
+    margin: 1rem 0;
+    color: var(--Gray600);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+/* HOVER */
+
+.order-summary__payment-button:hover {
+    background-color: var(--Blue950);
+}
+
+.order-summary__cancel-button:hover {
+    color: var(--White);
+    background-color: var(--Blue950);
+}
+
+.order-summary__plan-change:hover {
+    color: var(--Blue950);
+    text-decoration: none;
+}
+
+/* FOCUS */
+
+.order-summary__payment-button:focus-visible,
+.order-summary__cancel-button:focus-visible,
+.order-summary__plan-change:focus-visible {
+    outline: 2px solid var(--Blue950);
+    outline-offset: 3px;
+}
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+    body {
+        background-image: url(../images/pattern-background-desktop.svg);
+    }
+
+    .order-summary {
+        max-width: 28rem;
+        margin: 5rem 0;
+    }
+}
+
+
