@@ -5,10 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- STYLES -->
+   <link rel="stylesheet" href="./styles/styles.css">
+
+  <!-- PRECONNECT TO GOOGLE FONTS -->
+  <link 
+    rel="preconnect" 
+    href="https://fonts.googleapis.com"
+  >
+  <link 
+    rel="preconnect" 
+    href="https://fonts.gstatic.com" 
+    crossorigin
+  >
+  <!-- LOAD GOOGLE FONT RED HAT DISPLAY -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap" 
+    rel="stylesheet"
+  >
   
   <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+
   <style>
     .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,18 +36,48 @@
 </head>
 <body>
 
-  Order Summary
+  <main>
+    <article class="order-summary">
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+      <img 
+        src="./images/illustration-hero.svg" 
+        alt="Illustration Hero"
+        class="order-summary__illustration"
+      >
 
-  Annual Plan
-  $59.99/year
+      <div class="order-summary__content">
 
-  Change
+        <h1 class="order-summary__title">Order Summary</h1>
 
-  Proceed to Payment
-  Cancel Order
+        <p class="order-summary__description">
+          You can now listen to millions of songs, audiobooks, and podcasts on any 
+          device anywhere you like!
+        </p>
+
+      </div>
+
+      <div class="order-summary__plan">
+
+          <img 
+            src="./images/icon-music.svg" 
+            alt="Plan icon"
+            class="order-summary__plan-icon"
+          >
+
+        <div class="order-summary__plan-info">
+          <h3 class="order-summary__plan-name">Annual Plan</h3>
+          <p class="order-summary__plan-price">$59.99/year</p>
+        </div>
+
+        <a href="#" class="order-summary__plan-change">Change</a>
+      </div>
+
+      <div class="order-summary__buttons">
+        <button type="button" class="order-summary__payment-button">Proceed to Payment</button>
+        <button type="button" class="order-summary__cancel-button">Cancel Order</button>
+      </div>
+    </article>
+  </main>
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
